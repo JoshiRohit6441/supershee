@@ -483,6 +483,15 @@
   p {
     font-size: 15px;
   }
+  .diaply_about {
+    display: block;
+  }
+  .about_img_border {
+    margin: auto;
+  }
+  .about_heading {
+    text-align: centerF;
+  }
 }
 
 @media only screen and (max-width: 452px) {
