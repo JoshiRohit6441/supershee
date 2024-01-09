@@ -1,14 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   var navbarNav = document.querySelector("navbar-nav");
-//   var navbarToggler = document.querySelector("navbar-toggler");
-
-//   navbarToggler.addEventListener("click", function () {
-//     navbarNav.style.display === "none" || navbarNav.style.display === ""
-//       ? "block"
-//       : "none";
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   fetch("header.html")
     .then((response) => response.text())
@@ -24,5 +13,3 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("footer-container").innerHTML = html;
     });
 });
-
-
