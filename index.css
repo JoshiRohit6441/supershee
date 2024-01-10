@@ -398,6 +398,7 @@
 
   .custum_head {
     font-size: 15px;
+    padding: 10px !important;
   }
   .footer_main {
     display: block;
@@ -534,15 +535,12 @@
   }
 }
 
-
-
 @media only screen and (max-width: 500px) {
   .green_color {
     padding: 0 !important;
-    padding-bottom: 15px !important;
+    /* padding-bottom: 15px !important; */
   }
 }
-
 
 @media only screen and (max-width: 1000px) {
   .about_main {
@@ -565,7 +563,6 @@
     top: 36px;
   }
 }
-
 
 @media only screen and (max-width: 1400px) {
   .last_text_main {
