@@ -689,6 +689,9 @@
   .last_main_coulmn {
     display: block;
   }
+  .magzine_view_1_2 {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -757,6 +760,12 @@
   .micro_content_side p {
     height: 150px !important;
     overflow: hidden;
+  }
+  .magzine_view {
+    display: block;
+  }
+  .magzine_view_1 {
+    display: block;
   }
 }
 
