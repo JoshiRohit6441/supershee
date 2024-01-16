@@ -1,14 +1,10 @@
 $(document).ready(function () {
-  console.log("Document ready!");
-
   var megaMenu = $(".transparent_background");
   var contentRecordLink = $(".hovering_mega_menue");
-
   contentRecordLink.on("mouseenter", function () {
     console.log("Mouse enter on contentRecordLink");
     megaMenu.css("display", "block");
   });
-
   $(".nav_main, .transparent_background").on("mouseleave", function (e) {
     console.log("Mouse leave on nav_main or transparent_background");
     var target = $(e.relatedTarget);
@@ -23,9 +19,8 @@ $(document).ready(function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOMContentLoaded!");
 
+document.addEventListener("DOMContentLoaded", function () {
   fetch("header.html")
     .then((response) => response.text())
     .then((html) => {
@@ -37,4 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((html) => {
       document.getElementById("footer-container").innerHTML = html;
     });
+});
+
+$(document).ready(function () {
+  $(document).on("click touchstart", function (e) {
+    if (!$(e.target).closest(".navbar").length) {
+      if ($(".navbar-collapse").hasClass("show")) {
+        $(".navbar-toggler").trigger("click");
+      }
+    }
+  });
+  $(".navbar-nav").on("click touchstart", function (e) {
+    e.stopPropagation();
+  });
 });

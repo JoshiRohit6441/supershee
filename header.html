@@ -13,36 +13,38 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar nav_main">
-    <div class="container container-fluid display_main_nav">
-      <a class="navbar-brand btn green_color rounded-0 fw-bold text-light" href="index.html">LOGO</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-dark border-dark"></span>
-      </button>
+  <nav class="navbar navbar-expand-lg nav_main yellow_color">
+    <div class="container w-100 display_main_nav_main ">
+      <div class="display_main_nav">
+        <a class="navbar-brand btn green_color rounded-0 fw-bold text-light" href="index.html">LOGO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-dark border-dark"></span>
+        </button>
+      </div>
 
-      <div class="collapse navbar-collapse " id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav ml-auto display_nav">
           <a class="nav-item nav-link text-decoration-none text-secondry fw-bold border-bottom-nav" href="index.html"><i
-              class="fa fa-home"></i>&nbsp;
-            Home</a>
+              class="fa fa-home"></i>Home</a>
           <a class="nav-item nav-link text-decoration-none text-secondry fw-bold border-bottom-nav" href="about.html"><i
-              class="fa-solid fa-circle-info"></i>&nbsp; About Us</a>
+              class="fa-solid fa-circle-info"></i>About Us</a>
           <a class="nav-item nav-link text-decoration-none text-secondry fw-bold hovering_mega_menue border-bottom-nav"
-            href="contentRecord_list_view.html"><i class="fa fa-file-text"></i>&nbsp; Content
-            Record</a>
+            href="contentRecord_list_view.html"><i class="fa fa-file-text"></i>Content Record</a>
           <a class="nav-item nav-link text-decoration-none text-secondry fw-bold border-bottom-nav"
-            href="contact.html"><i class="fa-regular fa-address-book"></i>&nbsp; Contact Us</a>
+            href="contact.html"><i class="fa-regular fa-address-book"></i>Contact Us</a>
           <a class="nav-item nav-link text-decoration-none text-secondry fw-bold border-bottom-nav"
-            href="privacy.html"><i class="fas fa-shield-alt  "></i>&nbsp; Privacy Policies</a>
+            href="privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policies</a>
           <button
-            class="nav-item nav-link text-decoration-none text-secondry fw-semibold btn green_color rounded-0 text-light login-button-main ">Login</button>
+            class="nav-item nav-link text-decoration-none text-secondry fw-semibold btn green_color rounded-0 text-light login-button-main">
+            Login
+          </button>
           <a class="nav-item nav-link text-decoration-none text-secondry fw-bold login-hide border-bottom-nav"
-            href="#"><i class="fa-solid fa-right-to-bracket text-danger"></i>
-            &nbsp; LOGIN</a>
+            href="#"><i class="fa-solid fa-right-to-bracket text-danger"></i> LOGIN</a>
         </div>
       </div>
     </div>
+
   </nav>
   <!----------------MegaM-enue-------------->
   <div class="transparent_background w-100">
@@ -52,7 +54,9 @@
           <input type="text" class="form-control border-0 rounded-0" placeholder="write here........" />
         </div>
         <div class="col-md-3">
-          <button class="btn btn-light border-0 w-100 rounded-0">Search</button>
+          <button class="btn btn-light border-0 w-100 rounded-0">
+            Search
+          </button>
         </div>
       </div>
 
@@ -177,6 +181,32 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="index.js"></script>
+  <script>
+    $(document).ready(function () {
+      // console.log("Document ready!");
+
+      var megaMenu = $(".transparent_background");
+      var contentRecordLink = $(".hovering_mega_menue");
+
+      contentRecordLink.on("mouseenter", function () {
+        console.log("Mouse enter on contentRecordLink");
+        megaMenu.css("display", "block");
+      });
+
+      $(".nav_main, .transparent_background").on("mouseleave", function (e) {
+        console.log("Mouse leave on nav_main or transparent_background");
+        var target = $(e.relatedTarget);
+        if (
+          !contentRecordLink.is(target) &&
+          !megaMenu.is(target) &&
+          contentRecordLink.has(target).length === 0 &&
+          megaMenu.has(target).length === 0
+        ) {
+          megaMenu.css("display", "none");
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
