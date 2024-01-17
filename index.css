@@ -458,7 +458,8 @@
   margin-top: 10px !important;
 }
 img {
-  object-fit: contain;
+  object-fit: cover;
+  /* object-fit: contain; */
 }
 .contact_parent {
   width: 60%;
