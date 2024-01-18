@@ -1,24 +1,3 @@
-$(document).ready(function () {
-  var megaMenu = $(".transparent_background");
-  var contentRecordLink = $(".hovering_mega_menue");
-  contentRecordLink.on("mouseenter", function () {
-    console.log("Mouse enter on contentRecordLink");
-    megaMenu.css("display", "block");
-  });
-  $(".nav_main, .transparent_background").on("mouseleave", function (e) {
-    console.log("Mouse leave on nav_main or transparent_background");
-    var target = $(e.relatedTarget);
-    if (
-      !contentRecordLink.is(target) &&
-      !megaMenu.is(target) &&
-      contentRecordLink.has(target).length === 0 &&
-      megaMenu.has(target).length === 0
-    ) {
-      megaMenu.css("display", "none");
-    }
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   fetch("header.html")
     .then((response) => response.text())
@@ -33,15 +12,60 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// ---------------------mega menue------------------
 $(document).ready(function () {
-  $(document).on("click touchstart", function (e) {
-    if (!$(e.target).closest(".navbar").length) {
-      if ($(".navbar-collapse").hasClass("show")) {
-        $(".navbar-toggler").trigger("click");
-      }
+  var megaMenu = $(".transparent_background");
+  var contentRecordLink = $(".hovering_mega_menue");
+  var megaMenuTimer;
+
+  // Hide mega menu initially
+  megaMenu.css("display", "none");
+
+  contentRecordLink.on("mouseenter", function () {
+    clearTimeout(megaMenuTimer);
+
+    // Show mega menu on hovering content record
+    megaMenu.css("display", "block");
+    console.log("mega menu");
+  });
+
+  function hideMegaMenu() {
+    megaMenu.css("display", "none");
+  }
+
+  $(".nav_main, .transparent_background").on("mouseleave", function (e) {
+    var target = $(e.relatedTarget);
+
+    if (
+      !contentRecordLink.is(target) &&
+      !megaMenu.is(target) &&
+      contentRecordLink.has(target).length === 0 &&
+      megaMenu.has(target).length === 0
+    ) {
+      megaMenuTimer = setTimeout(hideMegaMenu, 100);
     }
   });
-  $(".navbar-nav").on("click touchstart", function (e) {
-    e.stopPropagation();
+
+  $(".nav_main, .transparent_background").on("mousemove", function (e) {
+    clearTimeout(megaMenuTimer);
+
+    var target = $(e.target);
+
+    if (
+      !contentRecordLink.is(target) &&
+      !megaMenu.is(target) &&
+      contentRecordLink.has(target).length === 0 &&
+      megaMenu.has(target).length === 0
+    ) {
+      megaMenuTimer = setTimeout(hideMegaMenu, 100);
+    }
+  });
+
+  megaMenu.on("mouseenter", function () {
+    clearTimeout(megaMenuTimer);
+  });
+
+  megaMenu.on("mouseleave", function () {
+    megaMenuTimer = setTimeout(hideMegaMenu, 100);
   });
 });
