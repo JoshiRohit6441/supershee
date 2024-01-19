@@ -18,13 +18,11 @@ $(document).ready(function () {
   var contentRecordLink = $(".hovering_mega_menue");
   var megaMenuTimer;
 
-  // Hide mega menu initially
   megaMenu.css("display", "none");
 
   contentRecordLink.on("mouseenter", function () {
     clearTimeout(megaMenuTimer);
 
-    // Show mega menu on hovering content record
     megaMenu.css("display", "block");
     console.log("mega menu");
   });
