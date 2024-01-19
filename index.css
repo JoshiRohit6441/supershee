@@ -879,6 +879,9 @@ img {
   .contact_parent::after {
     top: 148px;
   }
+  .text_contact {
+    margin-top: 15px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
