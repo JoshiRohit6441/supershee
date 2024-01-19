@@ -18,13 +18,12 @@ $(document).ready(function () {
   var contentRecordLink = $(".hovering_mega_menue");
   var megaMenuTimer;
 
-  megaMenu.css("display", "none");
+  // megaMenu.css("display", "none !important");
 
   contentRecordLink.on("mouseenter", function () {
     clearTimeout(megaMenuTimer);
 
     megaMenu.css("display", "block");
-    console.log("mega menu");
   });
 
   function hideMegaMenu() {
@@ -65,5 +64,70 @@ $(document).ready(function () {
 
   megaMenu.on("mouseleave", function () {
     megaMenuTimer = setTimeout(hideMegaMenu, 100);
+  });
+});
+
+// ------------------------------
+// $(document).ready(function () {
+//   function adjustLayout() {
+//     if ($(window).width() < "992px") {
+//       // Mobile view: Toggle visibility of sub-heads on click
+//       $(".mega_main_item").off("click");
+//       $(".mega_sub_head").show();
+//       $(".mega_main_item").hover(
+//         function () {
+//           $(this).find(".mega_sub_head").stop().slideDown();
+//         },
+//         function () {
+//           $(this).find(".mega_sub_head").stop().slideUp();
+//         }
+//       );
+//     }
+//   // else {
+//   //     // Desktop view: Show sub-heads on hover
+//   //     $(".mega_main_item").off("click");
+//   //     $(".mega_sub_head").show();
+//   //     $(".mega_main_item").hover(
+//   //       function () {
+//   //         $(this).find(".mega_sub_head").stop().slideDown();
+//   //       },
+//   //       function () {
+//   //         $(this).find(".mega_sub_head").stop().slideUp();
+//   //       }
+//   //     );
+//   //   }
+//   // }
+
+//   // Initial adjustment on page load
+//   adjustLayout();
+
+//   // Adjust layout on window resize
+//   $(window).resize(function () {
+//     adjustLayout();
+//   });
+// });
+
+$(document).ready(function () {
+  function adjustLayout() {
+    $(".mega_main_item").each(function () {
+      if ($(this).find(".mega_sub_head").css("display") === "none") {
+        $(this).off("click");
+        $(this).find(".mega_sub_head").hide();
+
+        $(this).click(function () {
+          $(this).find(".mega_sub_head").slideToggle();
+        });
+
+        $(this)
+          .find(".mega_sub_head")
+          .click(function (e) {
+            e.stopPropagation();
+          });
+      }
+    });
+  }
+  adjustLayout();
+  $(window).resize(function () {
+    adjustLayout();
   });
 });

@@ -19,7 +19,7 @@
 }
 .mega_main {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   justify-content: space-between;
 }
 .footer_main {
@@ -511,6 +511,9 @@ img {
 .main_head_mid {
   font-weight: 400 !important;
   font-size: 30px !important;
+}
+.mega_sub_head {
+  text-align: center;
 }
 /* -------------------------------responsive------------------- */
 
@@ -1084,6 +1087,13 @@ img {
     display: block;
     display: inline-block;
     margin-right: 10px;
+  }
+  .mega_main {
+    display: block;
+  }
+  .mega_sub_head {
+    display: none;
+    text-align: start;
   }
 }
 @media only screen and (max-width: 701px) {
