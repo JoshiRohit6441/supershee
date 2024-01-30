@@ -18,8 +18,6 @@ $(document).ready(function () {
   var contentRecordLink = $(".hovering_mega_menue");
   var megaMenuTimer;
 
-  // megaMenu.css("display", "none !important");
-
   contentRecordLink.on("mouseenter", function () {
     clearTimeout(megaMenuTimer);
 
@@ -68,45 +66,6 @@ $(document).ready(function () {
 });
 
 // ------------------------------
-// $(document).ready(function () {
-//   function adjustLayout() {
-//     if ($(window).width() < "992px") {
-//       // Mobile view: Toggle visibility of sub-heads on click
-//       $(".mega_main_item").off("click");
-//       $(".mega_sub_head").show();
-//       $(".mega_main_item").hover(
-//         function () {
-//           $(this).find(".mega_sub_head").stop().slideDown();
-//         },
-//         function () {
-//           $(this).find(".mega_sub_head").stop().slideUp();
-//         }
-//       );
-//     }
-//   // else {
-//   //     // Desktop view: Show sub-heads on hover
-//   //     $(".mega_main_item").off("click");
-//   //     $(".mega_sub_head").show();
-//   //     $(".mega_main_item").hover(
-//   //       function () {
-//   //         $(this).find(".mega_sub_head").stop().slideDown();
-//   //       },
-//   //       function () {
-//   //         $(this).find(".mega_sub_head").stop().slideUp();
-//   //       }
-//   //     );
-//   //   }
-//   // }
-
-//   // Initial adjustment on page load
-//   adjustLayout();
-
-//   // Adjust layout on window resize
-//   $(window).resize(function () {
-//     adjustLayout();
-//   });
-// });
-
 $(document).ready(function () {
   function adjustLayout() {
     $(".mega_main_item").each(function () {

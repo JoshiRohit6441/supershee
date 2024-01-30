@@ -3,14 +3,26 @@
   padding: 0;
   font-family: Inter;
 }
+.yellow_color {
+  background-color: rgba(248, 181, 0, 1);
+}
+.green_color {
+  background-color: #185041;
+}
+.txt_green {
+  color: #185041;
+}
 
 .nav_main {
   background-color: rgba(248, 181, 0, 1);
   box-shadow: 1px 1px 25px 1px rgb(123, 122, 122);
 }
-.yellow_color {
-  background-color: rgba(248, 181, 0, 1);
+.display_main_nav_main {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  justify-content: space-between;
 }
+
 .display_nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
@@ -22,6 +34,11 @@
   grid-template-columns: auto auto auto auto;
   justify-content: space-between;
 }
+.footer_main-three {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+}
 .footer_main {
   display: grid;
   grid-template-columns: 15% 80%;
@@ -31,17 +48,6 @@
   display: grid;
   grid-template-columns: 40% 45%;
   justify-content: space-evenly;
-}
-.footer_main-three {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: space-around;
-}
-.green_color {
-  background-color: #185041;
-}
-.txt_green {
-  color: #185041;
 }
 .fa-facebook-f {
   font-size: 20px;
@@ -76,6 +82,7 @@
   color: #185041;
   line-height: 30px;
 }
+
 .border-main-text {
   display: inline-block;
   position: relative;
@@ -449,11 +456,7 @@
 .text-contact p {
   line-height: 47px !important;
 }
-.display_main_nav_main {
-  display: grid;
-  grid-template-columns: 10% 90%;
-  justify-content: space-between;
-}
+
 .display_main_nav {
   display: block;
 }
@@ -996,7 +999,7 @@ img {
   }
   .mid_main_row_2_2_1 {
     grid-template-columns: none;
-    grid-template-rows: 70% 30% !important;
+    grid-template-rows: 65% 35% !important;
     justify-content: space-between;
     height: 300px;
   }
