@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  width: 700px;
+  height: 700px;
+  border: 1px solid black;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  grid-template-rows: repeat(3, 1fr);
+}
+.child {
+  border: 1px solid black;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+}
