@@ -582,13 +582,9 @@ img {
   justify-content: space-between;
   column-gap: 15px;
 }
-.last_landing_section_first_row div img {
-  height: -webkit-fill-available;
-}
+
 .last_landing_section_first_row_text {
   display: grid;
-  /* grid-template-rows: 3fr 1fr;
-  row-gap: 10px; */
 }
 
 .last_landing_section_first_row_text p {
@@ -597,12 +593,12 @@ img {
 }
 .last_landing_section_second {
   display: grid;
-  grid-template-columns: 48% 48%;
-  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
 }
 .last_landing_section_second_one {
   display: grid;
-  grid-template-rows: 48% 50%;
+  grid-template-rows: 1fr 2fr;
   overflow: hidden;
 }
 .last_landing_section_second_one_text {
@@ -625,25 +621,30 @@ img {
   grid-template-columns: 48% 48%;
   justify-content: space-between;
 }
-.last_landing_section_second_two_one_one div img {
-  height: -webkit-fill-available;
-}
-
 .last_landing_section_second_two_one_one_text {
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 70% 1fr;
+  overflow: hidden;
+  height: 170px;
 }
 .last_landing_section_second_two_one_one_text p {
   overflow: hidden;
   margin-bottom: 0;
 }
 .button {
-  padding: 5px 2px;
+  padding: 5px 10px;
   border: none;
 }
 /* -------------------------------responsive------------------- */
-
+@media only screen and (max-width: 1400px) {
+  .last_landing_section_first_row_text {
+    height: 185px !important;
+  }
+}
 @media only screen and (max-width: 768px) {
+  .last_landing_section_first {
+    display: block;
+  }
   .responsive_side_text {
     font-size: 13px;
   }
@@ -1119,6 +1120,14 @@ img {
   .last_landing_section {
     display: block;
   }
+  .last_landing_section_first {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+  }
+  .last_landing_section_first {
+    margin-bottom: 25px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1213,6 +1222,7 @@ img {
     display: grid;
     grid-template-columns: none;
     grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -1222,7 +1232,7 @@ img {
   .contant_upper_opt_one_text {
     font-size: 14px;
   }
-  .last_landing_section_second_one_text{
+  .last_landing_section_second_one_text {
     grid-template-rows: 85% 1fr;
     padding-bottom: 10px;
   }
