@@ -466,6 +466,7 @@
   display: grid;
   grid-template-rows: 56% 1fr;
   height: 100% !important;
+  overflow: hidden;
 }
 .mid_main_row_text_2_2_1 p {
   overflow: hidden;
