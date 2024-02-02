@@ -90,3 +90,17 @@ $(document).ready(function () {
     adjustLayout();
   });
 });
+
+// ------------------------------------menu-----------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("click", function (event) {
+    const navbar = document.getElementById("navbarNav");
+    const isNavbarCollapsed =
+      window.getComputedStyle(navbar).display === "none";
+    const isClickInsideNavbar = navbar.contains(event.target);
+
+    if (!isClickInsideNavbar || isNavbarCollapsed) {
+      $(".navbar-collapse").collapse("hide");
+    }
+  });
+});
