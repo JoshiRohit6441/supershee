@@ -1119,6 +1119,9 @@
     height: 200px !important;
     overflow: hidden;
   }
+  .social_account_name{
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
