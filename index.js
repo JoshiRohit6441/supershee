@@ -10,11 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((html) => {
       document.getElementById("footer-container").innerHTML = html;
     });
-  fetch("news_ooption.html")
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById("second-head-container").innerHTML = html;
-    });
 });
 
 // ------------------------------------menu-----------------------------------------------
