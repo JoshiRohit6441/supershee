@@ -9,6 +9,9 @@ p {
 .yellow_color {
   background-color: rgba(248, 181, 0, 1);
 }
+.border_bottom {
+ border-bottom: 3px solid rgba(248, 181, 0, 1);
+}
 .green_color {
   background-color: #185041;
 }
@@ -618,6 +621,9 @@ p {
 .pointer {
   cursor: pointer;
 }
+.no-scroll {
+  overflow: hidden;
+}
 /* -------------------------------responsive------------------- */
 @media only screen and (max-width: 1400px) {
   .last_landing_section_first_row_text {
@@ -992,7 +998,7 @@ p {
     height: 100%;
   }
   .micro_content_side p {
-    height: 130px !important;
+    height: 120px !important;
     overflow: hidden;
     margin-bottom: 0 !important;
   }

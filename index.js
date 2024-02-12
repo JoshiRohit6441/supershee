@@ -41,10 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("Clicked on " + item + " option");
           prefix.forEach(function (item, i) {
             var currDiv = document.querySelector("." + item + "_opt_resp");
-            if (i !== index) {
-              currDiv.classList.add("d-none");
+            if (currDiv) {
+              if (i !== index) {
+                currDiv.classList.add("d-none");
+              } else {
+                currDiv.classList.toggle("d-none");
+              }
             } else {
-              currDiv.classList.toggle("d-none");
+              console.error(
+                "Element not found for " + item + " option. Check IDs."
+              );
             }
           });
         });
@@ -57,14 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function (event) {
     var isClickedInsideOpt = prefix.some((item) => {
       var buttons = document.querySelectorAll("." + item + "_opt");
-      return Array.from(buttons).some(
-        (button) =>
-          button.contains(event.target) ||
-          event.target.classList.contains(item + "_opt")
+      var dropdowns = document.querySelectorAll("." + item + "_opt_resp");
+      return (
+        Array.from(buttons).some(
+          (button) =>
+            button.contains(event.target) ||
+            event.target.classList.contains(item + "_opt")
+        ) ||
+        Array.from(dropdowns).some((dropdown) =>
+          dropdown.contains(event.target)
+        )
       );
     });
     if (!isClickedInsideOpt) {
-      divs.forEach((div) => div.classList.add("d-none"));
+      divs.forEach((div) => {
+        if (div) {
+          div.classList.add("d-none");
+        }
+      });
     }
   });
 });
