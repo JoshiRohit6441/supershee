@@ -10,7 +10,7 @@ p {
   background-color: rgba(248, 181, 0, 1);
 }
 .border_bottom {
- border-bottom: 3px solid rgba(248, 181, 0, 1);
+  border-bottom: 3px solid rgba(248, 181, 0, 1);
 }
 .green_color {
   background-color: #185041;
@@ -624,10 +624,13 @@ p {
 .no-scroll {
   overflow: hidden;
 }
+.z-index-custom {
+  z-index: 50;
+}
 /* -------------------------------responsive------------------- */
 @media only screen and (max-width: 1400px) {
   .last_landing_section_first_row_text {
-    height: 185px !important;
+    height: 190px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -645,16 +648,15 @@ p {
     height: 700px;
     overflow: hidden;
   }
-  /* .last_landing_section_second_one_text {
-    height: 100%;
-    grid-template-rows: 73% 2fr;
-  } */
   .last_landing_section_first_row {
     height: 200px !important;
     overflow: hidden;
   }
   .social_account_name {
     font-size: 15px;
+  }
+  .mid_main_row_text_2_1_1 {
+    grid-template-rows: 2fr 5fr 1fr;
   }
 }
 
@@ -765,9 +767,6 @@ p {
   .secound_row_text_1 {
     grid-template-rows: 2fr 8fr 1fr;
   }
-  /* .mid_main_row_text_1 {
-    grid-template-rows: 18% 59% 20%;
-  } */
   .last_landing_section_first {
     height: auto;
   }
@@ -863,17 +862,12 @@ p {
     justify-content: space-between;
     margin-top: 15px;
   }
+  .mid_main_row_text_2_1_1 {
+    grid-template-rows: 2fr 6fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .last_landing_section_second_one_text {
-    /* display: grid;
-    grid-template-rows: 66% 1fr; */
-    height: 400px;
-  }
-  .last_landing_section_second_one {
-    height: 700px;
-  }
   .last_landing_section_first {
     display: block;
   }
@@ -890,9 +884,7 @@ p {
   .navbar {
     padding-bottom: 0;
   }
-  /* .display_main_nav {
-    padding: 0;
-  } */
+
   .nav-item {
     padding-left: 15px;
   }
@@ -1103,6 +1095,9 @@ p {
     display: block;
     height: auto !important;
   }
+  .last_landing_section_second_one {
+    height: 700px;
+  }
 }
 
 @media only screen and (max-width: 715px) {
@@ -1136,10 +1131,6 @@ p {
   .border-bottom-nav {
     border-bottom: 1px solid grey;
   }
-  /* .mid_main_row_text_2_1_1 {
-    grid-template-rows: 15% 62% 20%;
-    justify-content: space-between;
-  } */
 }
 @media only screen and (max-width: 500px) {
   .main_contant_display {
