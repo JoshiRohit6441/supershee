@@ -13,18 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ------------------------------------menu-----------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  document.addEventListener("click", function (event) {
-    const navbar = document.getElementById("navbarNav");
-    const isNavbarCollapsed =
-      window.getComputedStyle(navbar).display === "none";
-    const isClickInsideNavbar = navbar.contains(event.target);
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.addEventListener("click", function (event) {
+//     const navbar = document.getElementById("navbarNav");
+//     const isNavbarCollapsed =
+//       window.getComputedStyle(navbar).display === "none";
+//     const isClickInsideNavbar = navbar.contains(event.target);
 
-    if (!isClickInsideNavbar || isNavbarCollapsed) {
-      $(".navbar-collapse").collapse("hide");
-    }
-  });
-});
+//     if (!isClickInsideNavbar || isNavbarCollapsed) {
+//       $(".navbar-collapse").collapse("hide");
+//     }
+//   });
+// });
 // --------------------------------------second-head-section--------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   var prefix = ["first", "second", "third", "fourth", "fifth"];
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       opts.forEach(function (opt) {
         opt.addEventListener("click", function (event) {
           event.preventDefault();
-          console.log("Clicked on " + item + " option");
+          // console.log("Clicked on " + item + " option");
           prefix.forEach(function (item, i) {
             var currDiv = document.querySelector("." + item + "_opt_resp");
             if (currDiv) {
