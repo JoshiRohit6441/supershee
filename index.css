@@ -1302,7 +1302,7 @@ p {
 
 .item3_text {
   display: grid;
-  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 7fr 1fr;
 }
 
 .item3_text p {
