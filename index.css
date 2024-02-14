@@ -259,7 +259,7 @@ p {
 .contant_upper_opt_two {
   display: grid;
   grid-template-columns: 30% 59%;
-  column-gap: 10px;
+  justify-content: space-between;
 }
 .search-input {
   position: relative;
