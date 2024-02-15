@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        .mid_main {
+            display: grid;
+            grid-template-areas:
+                'five five six six six six six six seven'
+                'five five six six six six six six seven'
+                'five five six six six six six six seven'
+                'five five six six six six six six seven'
+                'five five eight nine nine nine nine nine nine'
+                'five five eight nine nine nine nine nine nine'
+                'five five eight nine nine nine nine nine nine'
+            ;
+            column-gap: 15px;
+            row-gap: 15px;
+            /* height: 700px; */
+            overflow: hidden;
+        }
+
+        .item5 {
+            display: grid;
+            grid-template-rows: 3fr 10fr;
+            overflow: hidden;
+            height: 700px;
+        }
+
+        .item5_text {
+            display: grid;
+            grid-template-rows: 1fr 5fr 1fr;
+            overflow: hidden;
+        }
+
+        .item5_text p {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .item6 {
+            height: 450px;
+        }
+
+        .item7 {
+            height: 450px;
+            display: grid;
+            grid-template-rows: 30% 70%;
+            overflow: hidden;
+        }
+
+        .item7_text {
+            display: grid;
+            grid-template-rows: 1fr 4fr 1fr;
+        }
+
+        .item7_text p {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .item8,
+        .item9 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            height: 250px;
+            gap: 15px;
+        }
+
+        .item8_text,
+        .item9_text {
+            display: grid;
+            grid-template-rows: 1fr 3fr 2fr;
+            overflow: hidden;
+
+        }
+
+        .item_p {
+            overflow: hidden;
+        }
+
+        .item8 div img,
+        .item9 div img {
+            object-fit: cover;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .mid_main {
+                grid-template-areas:
+                    'five five five five five'
+                    'six six six six seven'
+                    'eight eight . nine nine '
+                ;
+            }
+
+            .item5 {
+                grid-template-columns: 40% 60%;
+                height: 300px;
+                column-gap: 15px;
+            }
+
+            .item5_text {
+                grid-template-rows: 1fr 6fr 1fr;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .mid_main {
+                grid-template-areas:
+                    'five five five five five'
+                    'six six six seven seven'
+                    'eight eight . nine nine'
+                ;
+            }
+
+            .item6,
+            .item7 {
+                height: 400px;
+            }
+
+            .item7 {
+                grid-template-rows: 45% 55%;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .mid_main {
+                grid-template-areas:
+                    'five five five five five'
+                    'six six six seven seven'
+                    'eight eight eight eight eight'
+                    'nine nine nine nine nine'
+                ;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .item5 {
+                grid-template-columns: none;
+                grid-template-rows: 40% 60%;
+                height: 400px;
+            }
+
+            .mid_main {
+                grid-template-areas:
+                    'five five five five five'
+                    'six six six six six'
+                    'seven seven seven seven seven'
+                    'eight eight eight eight eight'
+                    'nine nine nine nine nine'
+                ;
+            }
+
+            .item6 {
+                height: 300px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+
+            .item8,
+            .item9 {
+                display: grid;
+                grid-template-columns: none;
+                grid-template-rows: 40% 60%;
+                height: 400px;
+                gap: 15px;
+            }
+
+            .item8 div img,
+            .item9 div img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w-100 border-bottom border-5 border-warning mb-3 pb-5 mt-5 padding_bottom_0">
+        <div class="border-main-text mb-3">
+            <h2 class="text-light  green_color ms-3 custum_head text-justify">
+                France’s&nbsp;Political&nbsp;Instability
+            </h2>
+        </div>
+        <!------------------->
+        <div class="mid_main">
+            <div class="item5" style="grid-area: five;">
+                <div>
+                    <img src="images/landing5.png" class="w-100 h-100" alt="error" />
+                </div>
+                <div class="w-100 item5_text">
+                    <h3 class="fs-5 mt-1 mb-0">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </h3>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet consectetur. Nam mauris ultricies
+                        sollicitudin cursus lacus sagittis. Integer nulla euismod accumsan est
+                        dignissim condimentum odio interdum. Ac massa sollicitudin mattis sem
+                        sagittis feugiat enim mattis. Integer vel aliquam leo mattis bibendum
+                        felis. Fermentum volutpat habitant feugiat magna in diam. Sit sit
+                        commodo nulla aliquam leo mattis bibendum felis. Fermentum volutpat
+                        habitant feugiat magna in diam. Sit sit commodo nulla aliquam leo
+                        mattis bibendum felis. Fermentum volutpat habitant feugiat magna in
+                        diam. Sit sit commodo nulla id.
+                    </p>
+                    <div class="pt-3 pe-3 text-end">
+                        <button class="button green_color rounded-0 text-white"><a href="microContent.html"
+                                class="text-decoration-none text-light">Read More</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item6" style="grid-area: six;">
+                <div class="image_text_landing h-100">
+                    <img src="images/landing6.png" class="w-100 h-100" alt="error" />
+                </div>
+            </div>
+
+            <div class="item7" style="grid-area: seven;">
+                <div class="w-100 ">
+                    <img src="images/landing7.png" class="w-100 h-100" alt="error" />
+                </div>
+                <div class="w-100 item7_text">
+                    <h3 class="fs-5  mb-0 mt-1">Lorem ipsum dolor sit </h3>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet consectetur. Nam mauris midsdod
+                        ultricies sollicitudin lroeli cursus lacus sagittis. Integer nulla
+                        lorem ipx euismod accumsan est dignissim condimentum kedidiv
+                        lroeli cursus lacus sagittis. Integer nulla lorem ipx euismod
+                        accumsan est
+                    </p>
+                    <div class="pt-2 text-end">
+                        <button class="button green_color rounded-0 text-white"><a href="microContent.html"
+                                class="text-decoration-none text-white">Read More</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item8" style="grid-area: eight;">
+                <div class="w-100">
+                    <img src="images/landing8.png" alt="error" />
+                </div>
+                <div class="item8_text">
+                    <h3 class="fs-5 mb-0 mt-1">Lorem ipsum dolor sit </h3>
+                    <p class="text-justify item_p">
+                        Lorem ipsum dolor sit amet consectetur. Nam mauris midsdod
+                        ultricies sollicitudin lroeli cursus lacus sagittis. Integer nulla
+                        lorem ipx euismod accumsan est dignissim condimentum kedidiv
+                        lroeli cursus lacus sagittis. Integer nulla lorem ipx euismod
+                        accumsan est
+                    </p>
+                    <div class="pt-2 text-end">
+                        <button class="button green_color rounded-0 text-white"><a href="microContent.html"
+                                class="text-decoration-none text-white">Read More</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item9" style="grid-area: nine;">
+                <div class="w-100">
+                    <img src="images/landing8.png" alt="error" />
+                </div>
+                <div class="item9_text">
+                    <h3 class="fs-5 mb-0 mt-1">Lorem ipsum dolor sit </h3>
+                    <p class="text-justify item_p">
+                        Lorem ipsum dolor sit amet consectetur. Nam mauris midsdod
+                        ultricies sollicitudin lroeli cursus lacus sagittis. Integer nulla
+                        lorem ipx euismod accumsan est dignissim condimentum kedidiv
+                        lroeli cursus lacus sagittis. Integer nulla lorem ipx euismod
+                        accumsan est
+                    </p>
+                    <div class="pt-2 text-end">
+                        <button class="button green_color rounded-0 text-white"><a href="microContent.html"
+                                class="text-decoration-none text-white">Read More</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
